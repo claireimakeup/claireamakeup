@@ -1,0 +1,278 @@
+/* Claire Imbrogno - Makeup Artist Website Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Times+New+Roman&display=swap');
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tenor Sans', Georgia, serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 60px 0;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 15px;
+    letter-spacing: 4px;
+    font-weight: normal;
+    color: #222;
+}
+
+.hero h2 {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    color: #666;
+    margin-bottom: 30px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+
+.hero-image {
+    margin-top: 40px;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.02);
+}
+
+/* About Section */
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    margin-bottom: 80px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #222;
+    letter-spacing: 1px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Portfolio Section */
+.portfolio {
+    margin-bottom: 80px;
+}
+
+.portfolio h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+    color: #222;
+    letter-spacing: 2px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.portfolio-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-item h3 {
+    padding: 20px;
+    margin: 0;
+    font-size: 1.3rem;
+    color: #333;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    margin-bottom: 80px;
+}
+
+.testimonials h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+    color: #222;
+    letter-spacing: 2px;
+}
+
+.testimonial {
+    background: #f8f8f8;
+    padding: 40px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+.testimonial p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    font-style: italic;
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    background: #222;
+    color: white;
+    padding: 60px 40px;
+    border-radius: 12px;
+    margin-top: 40px;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.contact a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 40px 0;
+        margin-bottom: 40px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .testimonial {
+        padding: 25px;
+    }
+
+    .contact {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        letter-spacing: 2px;
+    }
+
+    .hero h2 {
+        letter-spacing: 1px;
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
+
+    .portfolio h2,
+    .testimonials h2 {
+        font-size: 2.2rem;
+    }
+
+    .contact h2 {
+        font-size: 2rem;
+    }
+}
